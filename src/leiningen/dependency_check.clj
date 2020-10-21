@@ -32,7 +32,7 @@
   "Create a project to launch dependency-check, with only dependency-check as a dependency."
   [project]
   (if-let [dependency-check-vec (->> (:plugins project)
-                                     (filter #(= 'com.livingsocial/lein-dependency-check
+                                     (filter #(= 'jimberlage/lein-dependency-check
                                                  (first %)))
                                      first)]
     {:dependencies [dependency-check-vec]}
